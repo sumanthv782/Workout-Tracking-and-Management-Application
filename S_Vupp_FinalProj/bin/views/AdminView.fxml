@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: bbbdbd;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminController">
+   <children>
+    <!-- Welcome Message -->
+		 <Label layoutX="26.0" layoutY="26.0" prefHeight="53.0" prefWidth="238.0" text="Welcome Admin!" textAlignment="CENTER">
+         	<font>
+            	<Font name="System Bold Italic" size="14.0" />
+         	</font>
+         </Label>
+		 <!-- View Profile Button -->
+      <Button layoutX="20.0" layoutY="70.0" mnemonicParsing="false" text="View Accounts" onAction = "#handleViewAccountsButtonClicked"/>
+      <!-- Add Workout Plan Button -->
+      <Button layoutX="120.0" layoutY="70.0" mnemonicParsing="false" text="Update Workouts" onAction = "#handleUpdateWorkoutButtonClicked"/>
+      <!-- TableView to display sv_user_progress table -->
+	  <TableView fx:id="progressTable" editable="false" layoutX="20.0" layoutY="100.0" prefHeight="250.0" prefWidth="560.0">
+	      <columns>
+	        <TableColumn text="workoutID" fx:id="workoutIDColumn" />
+	        <TableColumn text="PID" fx:id="pidColumn" />
+	        <TableColumn text="Muscle Group" fx:id="muscleGroupColumn" />
+	        <TableColumn text="Exercise Name" fx:id="exerciseNameColumn" />
+	        <TableColumn text="Difficulty" fx:id="difficultyColumn" />
+	        <TableColumn text="Reps Required" fx:id="repsRequiredColumn" />
+	        <TableColumn text="Reps Completed" fx:id="repsCompletedColumn" />
+	        <TableColumn text="Progress" fx:id="progressColumn" />
+	    </columns>
+    </TableView>
+    
+    <Button layoutX="20.0" layoutY="360.0" mnemonicParsing="false" text="Logout" onAction="#handleLogoutButtonClicked" />
+   </children>
+</AnchorPane>

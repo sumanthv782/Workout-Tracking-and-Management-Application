@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="360.0" prefWidth="560.0" style="-fx-background-color: bbbdbd;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewAccountsController">
+   <children>
+      <TableView fx:id="viewAccountsTable" editable="false" layoutX="0" layoutY="0" prefHeight="300.0" prefWidth="560.0">
+         <columns>
+         
+            <TableColumn fx:id="userID" prefWidth="110.0" text="User ID" />
+            
+            <TableColumn fx:id="username" prefWidth="140.0" text="username" />
+            <TableColumn fx:id="password" prefWidth="140.0" text="password" />
+            
+         </columns>
+      </TableView>
+      
+	  <Button layoutX="20.0" layoutY="325.0" mnemonicParsing="false" text="ResetPassword" onAction="#handleResetPasswordButtonClicked" />
+	  <Button layoutX="130.0" layoutY="325.0" mnemonicParsing="false" text="Delete" onAction="#handleDeleteUserButtonClicked"/>
+   </children>
+</AnchorPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="360.0" prefWidth="560.0" style="-fx-background-color: bbbdbd;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddExerciseController">
+   <children>
+      <TableView fx:id="addExerciseTable" editable="false" layoutX="0" layoutY="0" prefHeight="360.0" prefWidth="560.0">
+         <columns>
+            <!-- Column for Exercise -->
+            <TableColumn fx:id="colMuscleGroup" prefWidth="110.0" text="Muscle Group" />
+            
+            <TableColumn fx:id="colExercise" prefWidth="140.0" text="Exercise" />
+
+            <!-- Column for Difficulty -->
+            <TableColumn fx:id="colDifficulty" prefWidth="100.0" text="Difficulty" />
+
+            <!-- Column for Reps -->
+            <TableColumn fx:id="colReps" prefWidth="100.0" text="Reps" />
+            
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

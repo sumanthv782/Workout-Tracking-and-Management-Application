@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: bbbdbd;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserController">
+   <children>
+      <!-- Welcome Message -->
+		 <Label layoutX="26.0" layoutY="26.0" prefHeight="53.0" prefWidth="238.0" text="Welcome to your Fitness tracker!" textAlignment="CENTER">
+         	<font>
+            	<Font name="System Bold Italic" size="14.0" />
+         	</font>
+         </Label>
+      <!-- Add Workout Plan Button -->
+      <Button fx:id="btnAddExercise" layoutX="20.0" layoutY="70.0" mnemonicParsing="false" text="Add Exercise" onAction="#handleAddExerciseButtonClicked" />
+
+	  <Button layoutX="20.0" layoutY="720.0" mnemonicParsing="false" text="Refresh" onAction="#handleRefreshButtonClicked" />
+	  <Button layoutX="80.0" layoutY="720.0" mnemonicParsing="false" text="Update" onAction="#handleUpdateButtonClicked" />
+	  <Button layoutX="140.0" layoutY="720.0" mnemonicParsing="false" text="Delete" onAction="#handleDeleteButtonClicked" />
+	  <Button layoutX="200.0" layoutY="720.0" mnemonicParsing="false" text="Logout" onAction="#handleLogoutButtonClicked" />
+	  
+      <!-- TableView for User Progress -->
+      <TableView fx:id="exerciseTable1" editable="false" layoutX="20.0" layoutY="100.0" prefHeight="600.0" prefWidth="375.0">
+         <columns>
+            <!-- Column for Workout Plan -->
+            <TableColumn fx:id="colMuscleGroup" prefWidth="90.0" text="Muscle Group" />
+            <TableColumn fx:id="colExercise" prefWidth="105.0" text="Exercise" />
+            <TableColumn fx:id="colDifficulty" prefWidth="75.0" text="Difficulty" />
+			<TableColumn fx:id="colReps" prefWidth="100.0" text="Reps Required" />
+         </columns>
+      </TableView>
+      
+      <TableView fx:id="exerciseTable2" editable="false" layoutX="385.0" layoutY="100.0" prefHeight="600.0" prefWidth="180.0">
+         <columns>
+            <TableColumn fx:id="colRepsCompleted" editable="false" prefWidth="100.0" text="Reps Completed" />
+			<TableColumn fx:id="colProgress" prefWidth="75.0" text="Progress" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
